@@ -1,5 +1,5 @@
 {
-  "name": "web-app-mapveu",
+  "name": "@veupathdb/mapveu-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
