@@ -10,6 +10,7 @@ import reportWebVitals from './reportWebVitals';
 
 import '@veupathdb/wdk-client/lib/Core/Style/index.scss';
 import '@veupathdb/web-common/lib/styles/client.scss';
+import { MapVeuContainer } from './lib/MapVeuContainer';
 
 initialize({
   rootUrl,
@@ -18,6 +19,11 @@ initialize({
     {
       path: '/',
       component: (props: RouteComponentProps<void>) => <Home />,
+    },
+    {
+      path: '/mapveu',
+      component: MapVeuContainer,
+      exact: false,
     },
     ...routes,
   ],

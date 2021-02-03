@@ -2200,6 +2200,17 @@
   resolved "https://registry.yarnpkg.com/@veupathdb/browserslist-config/-/browserslist-config-1.0.0.tgz#90ca79640ffbb195a87d4d65cd4b2f92342f8b76"
   integrity sha512-qfKu1z9gaaHdMgRGaZBiayuIh92ishsf14lR+Rj61CJF131XWq3+5e2VyLyOdKsYJ1EreAxgyC/0upIBEzwQJw==
 
+"@veupathdb/eda-workspace-core@^0.0.2-alpha.11":
+  version "0.0.2-alpha.11"
+  resolved "https://registry.yarnpkg.com/@veupathdb/eda-workspace-core/-/eda-workspace-core-0.0.2-alpha.11.tgz#66126c0b89cb6c193445102e08caf9a90344f900"
+  integrity sha512-2KPIm3p1/phZOCirpyQkni3FI8IDzYYBlc2d+n83iSzjljL9c6ih3Lc6QOO0qj/PfPLOHtovKiOl8G9Nifv43w==
+  dependencies:
+    "@veupathdb/wdk-client" "^0.1.1-alpha.4"
+    "@veupathdb/web-common" "^0.1.1-alpha.2"
+    fp-ts "^2.9.3"
+    io-ts "^2.2.13"
+    react "^17.0.1"
+
 "@veupathdb/eslint-config@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@veupathdb/eslint-config/-/eslint-config-1.0.0.tgz#40dc855b263bd3fd68f8f61508ef55b1dc163caf"
@@ -2226,7 +2237,7 @@
   resolved "https://registry.yarnpkg.com/@veupathdb/tsconfig/-/tsconfig-1.0.1.tgz#a2b748b46838af1337ca9f23d969993fb952def4"
   integrity sha512-i6gq7mgnyEN8/xW5EaI9RiWCwS1oB8cgWqx9h5w4vZtnb10oiyyepD640l9x/gZf6IWecjynRs7weDgSRs7l0Q==
 
-"@veupathdb/wdk-client@^0.1.1-alpha.6":
+"@veupathdb/wdk-client@^0.1.1-alpha.4", "@veupathdb/wdk-client@^0.1.1-alpha.6":
   version "0.1.1-alpha.6"
   resolved "https://registry.yarnpkg.com/@veupathdb/wdk-client/-/wdk-client-0.1.1-alpha.6.tgz#653aeadebee5d2fefeed7c8d1502f3f90048fcef"
   integrity sha512-dfuAs23g5BY72A+H+IRKca6muUQYi5OOZ5YqRsn5Gr8BaIdR1BLocRfnLz/g05S7esrSeYSk6Pri60oGOVQJNg==
@@ -5613,6 +5624,11 @@ forwarded@~0.1.2:
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
 
+fp-ts@^2.9.3:
+  version "2.9.4"
+  resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-2.9.4.tgz#7778ddeee5da535a89c04a2cbd09b2210adcdb45"
+  integrity sha512-s4wbgHOylMdOALJuF07Y1jblFAhe+2I68tR/SymAb2a/BcwGRD/l/9oc6SESgiaTnCFR3d2FZ5LZpsMmXMWv5A==
+
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"
@@ -6437,6 +6453,11 @@ internal-slot@^1.0.2:
     es-abstract "^1.17.0-next.1"
     has "^1.0.3"
     side-channel "^1.0.2"
+
+io-ts@^2.2.13:
+  version "2.2.13"
+  resolved "https://registry.yarnpkg.com/io-ts/-/io-ts-2.2.13.tgz#e04016685e863dd5cffb2b5262c5c9c74432dfda"
+  integrity sha512-BYJgE/BanovJKDvCnAkrr7f3gTucSyk+Sr5VtpouBO1/YfBKUyIn2z1ODG8LEF+1D4sjKZ3Bd/A5/v8JrJe5UQ==
 
 ip-regex@^2.1.0:
   version "2.1.0"
