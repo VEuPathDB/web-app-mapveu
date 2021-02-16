@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import {
-  AnalysisStore,
-  useAnalysisList,
+  SessionStore,
+  useSessionList,
   useStudy,
 } from '@veupathdb/eda-workspace-core';
 import { useRouteMatch, Link, useHistory } from 'react-router-dom';
@@ -9,18 +9,18 @@ import { safeHtml } from '@veupathdb/wdk-client/lib/Utils/ComponentUtils';
 
 interface Props {
   studyId: string;
-  analysisStore: AnalysisStore;
+  sessionStore: SessionStore;
 }
 
-export function AnalysisList(props: Props) {
-  const { analysisStore, studyId } = props;
+export function SessionList(props: Props) {
+  const { sessionStore, studyId } = props;
   const { studyRecord } = useStudy();
-  const list = useAnalysisList();
+  const list = useSessionList();
   const { url } = useRouteMatch();
   const history = useHistory();
-  const createAnalysis = useCallback(async () => {
-    const id = await analysisStore.createAnalysis({
-      name: 'Unnamed analysis',
+  const createSession = useCallback(async () => {
+    const id = await sessionStore.createSession({
+      name: 'Unnamed session',
       studyId,
       visualizations: [],
       variableUISettings: {},
@@ -29,25 +29,23 @@ export function AnalysisList(props: Props) {
       filters: [],
     });
     history.push(`${url}/${id}`);
-  }, [analysisStore, history, studyId, url]);
+  }, [sessionStore, history, studyId, url]);
   return (
     <>
       <h2>Study: {studyRecord.displayName}</h2>
-      <h3>Saved Analyses</h3>
+      <h3>Saved Sessions</h3>
       <div>
-        <button className="btn" type="button" onClick={createAnalysis}>
-          New Analysis
+        <button className="btn" type="button" onClick={createSession}>
+          New Session
         </button>
       </div>
       {list.length === 0 ? (
-        <em>You do not have any analyses for this study.</em>
+        <em>You do not have any sessions for this study.</em>
       ) : (
         <ul>
-          {list.map((analysis) => (
+          {list.map((session) => (
             <li>
-              <Link to={`${url}/${analysis.id}`}>
-                {safeHtml(analysis.name)}
-              </Link>
+              <Link to={`${url}/${session.id}`}>{safeHtml(session.name)}</Link>
             </li>
           ))}
         </ul>

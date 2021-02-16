@@ -1,13 +1,13 @@
-import { useAnalysis, useStudy } from '@veupathdb/eda-workspace-core';
+import { useSession, useStudy } from '@veupathdb/eda-workspace-core';
 import { safeHtml } from '@veupathdb/wdk-client/lib/Utils/ComponentUtils';
 import { preorder } from '@veupathdb/wdk-client/lib/Utils/TreeUtils';
 
-export function MapVeuAnalysis() {
+export function MapVeuSession() {
   const { studyRecord, studyMetadata } = useStudy();
   const {
-    history: { current: analysis },
-  } = useAnalysis();
-  if (analysis == null) return <div>No analysis found</div>;
+    history: { current: session },
+  } = useSession();
+  if (session == null) return <div>No session found</div>;
   const entities = Array.from(
     preorder(studyMetadata.rootEntity, (e) => e.children ?? [])
   );
@@ -25,13 +25,13 @@ export function MapVeuAnalysis() {
           </ul>
         </dd>
       </dl>
-      <h3>Analysis details</h3>
+      <h3>Session details</h3>
       <dl>
         {' '}
         <dt>Name</dt>
-        <dd>{analysis?.name}</dd>
+        <dd>{session?.name}</dd>
         <dt>Created</dt>
-        <dd>{analysis.created}</dd>
+        <dd>{session.created}</dd>
       </dl>
     </>
   );
